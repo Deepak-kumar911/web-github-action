@@ -31,7 +31,7 @@ jobs:
         run: node -v
 
       - name: Install dependencies
-        run: npm Install
+        run: npm install
 
       - name: create react build
         run: npm run build
