@@ -9,3 +9,9 @@ jobs:
     steps:
       - name: Print Message
         run: echo "Hello First Github Actions"
+
+      - name: Node version
+        run: node -v
+      
+      - name: current directory
+        run: pwd
