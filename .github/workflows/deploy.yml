@@ -1,0 +1,37 @@
+name: Deploy react_vite
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      
+      - name: current branch
+        run: git branch
+      
+      - name: print repository files
+        run: ls -la
+
+      - name: print os info
+        run: uname -a
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+        
+      - name: Node version
+        run: node -v
+
+      - name: Install dependencies
+        run: npm Install
+
+      - name: create react build
+        run: npm run build
