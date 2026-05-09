@@ -100,7 +100,7 @@ const Hero = () => {
             </motion.div>
 
             <motion.h1 variants={itemVariants} className="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-4 leading-tight tracking-tight">
-              Hi, I'm <br />
+              Hi, I&apos;m <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400">
                 Deepak Kumar
               </span>

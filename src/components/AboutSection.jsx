@@ -54,10 +54,6 @@ const strengths = [
 
 const industries = ["EdTech", "AI SaaS", "Dating Platforms", "ERP Systems", "Logistics", "CRM Systems"];
 
-const techTags = [
-  "React.js", "Next.js", "Node.js", "Express.js", "MongoDB", "PostgreSQL",
-  "Redis", "AWS", "Firebase", "Socket.io", "Stripe", "Razorpay", "OpenAI APIs"
-];
 
 const About = () => {
   return (
@@ -151,23 +147,6 @@ const About = () => {
               </div>
             </div>
           </motion.div>
-
-          {/* Tech Stack Full Width Section */}
-          {/* <motion.div variants={itemVariants} className="lg:col-span-12 mt-4">
-            <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-6 md:p-8 rounded-3xl shadow-2xl flex flex-col md:flex-row items-center gap-8 justify-between">
-              <div className="shrink-0 text-center md:text-left">
-                <h3 className="text-xl font-semibold text-white mb-2">Tech Stack Arsenal</h3>
-                <p className="text-sm text-gray-400 font-light">Tools I use to bring ideas to life.</p>
-              </div>
-              <div className="flex flex-wrap justify-center md:justify-end gap-2">
-                {techTags.map(tech => (
-                  <span key={tech} className="px-3 py-2 bg-[#0a0a0a]/80 border border-white/5 rounded-xl text-sm text-gray-300 hover:text-purple-400 hover:border-purple-500/30 transition-all cursor-default hover:scale-105">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </motion.div> */}
 
         </div>
       </motion.div>
