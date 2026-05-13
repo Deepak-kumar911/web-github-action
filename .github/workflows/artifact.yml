@@ -23,7 +23,7 @@ jobs:
       - run: npm run lint
 
   build:
-    needs: linit
+    needs: lint
     runs-on: ubuntu-latest
 
     steps:
