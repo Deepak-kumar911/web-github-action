@@ -48,7 +48,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
 
-    setups:
+    steps:
       - name: Dowload Dist folder
         uses: actions/dowload-artifact@v4
         with:
