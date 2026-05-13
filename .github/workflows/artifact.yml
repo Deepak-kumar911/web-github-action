@@ -1,0 +1,58 @@
+name: React vite CI pipeline
+# artifact share files b/w jobs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+      steps:
+        - uses: actions/checkout@v4
+
+        - uses: actions/node-setup@v4
+          with:
+            node-version:22
+            cache: npm
+
+        - run: npm install
+
+        - run: npm run lint
+
+  build:
+    needs: linit
+    runs-on: ubuntu-latest
+
+      steps:
+        - uses: actions/checkout@v4
+
+        - uses: actions/node-setup@v4
+          with:
+            node-version:22
+            cache:npm 
+        
+        - run: npm run install
+
+        - run: npm run build
+
+        - name: Upload Dist folder
+          uses: actions/upload-artifact@v4
+          with:
+            name: vite-dist
+            path: dist
+
+  deploy-preview:
+    needs: build
+    runs-on: ubuntu-latest
+
+    setups:
+      - name: Dowload Dist folder
+        uses: actions/dowload-artifact@v4
+        with:
+          name: vite-dist
+      
+      - name: Show downloaded files
+        run: ls -la
